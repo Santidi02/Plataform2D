@@ -7,8 +7,13 @@ public class PracticaDos : MonoBehaviour
 {
     void Start()
     {
-        // Ejemplo de uso
-        var resultado = MinMax(10, 20, 30);
+        // Generar tres números aleatorios entre -100 y 100
+        int numero1 = UnityEngine.Random.Range(-100, 101);
+        int numero2 = UnityEngine.Random.Range(-100, 101);
+        int numero3 = UnityEngine.Random.Range(-100, 101);
+
+        // Uso de la función
+        var resultado = MinMax(numero1, numero2, numero3);
         Debug.Log(resultado);
     }
 
@@ -22,13 +27,13 @@ public class PracticaDos : MonoBehaviour
 
         Debug.Log($"El número mayor es: {mayor}, El número menor es: {menor}");
 
-        // Verificar si el mayor está fuera del rango
+        // Verificar  mayor y menor fuera del rango
         if (mayor > 100)
         {
             return "Mayor fuera de rango";
         }
 
-        // Verificar si el menor está fuera del rango
+        
         if (menor < 0)
         {
             return "Menor fuera de rango";
